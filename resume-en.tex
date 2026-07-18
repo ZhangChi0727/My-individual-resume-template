@@ -1,0 +1,116 @@
+% resume-en.tex — English resume, System & Function Development Engineer, ZF Jinan
+% Compile:  xelatex resume-en.tex   (or pdflatex resume-en.tex)
+\documentclass{resume}
+
+\begin{document}
+
+\resumeheader
+  {Chi Zhang}
+  {System \& Function Development Engineer Candidate}
+  {%
+    \contactitem{\faPhone}{180-4527-9927}%
+    \contactsep
+    \contactitem{\faEnvelope}{Chizhang0727@gmail.com}%
+    \contactsep
+    \contactitem{\faMapMarker}{Shanghai, China}%
+    \contactsep
+    \contactitem{\faGithub}{\resumelink{https://github.com/ZhangChi0727}{github.com/ZhangChi0727}}%
+  }
+
+\ressection{\faGraduationCap}{Education}
+
+\resumeentry
+  {Shanghai Jiao Tong University --- School of Aeronautics and Astronautics}
+  {Sep 2023 -- Mar 2026}
+  {M.Eng., Aerospace Systems Engineering (Vehicle System Design direction)}
+  {Shanghai, China}
+\begin{itemize}
+  \item Thesis: \textit{Research on a Vehicle Data Management System based on the MBSE ARCADIA Methodology} --- see Project Experience.
+\end{itemize}
+
+\resumeentry
+  {Moscow Aviation Institute (MAI)}
+  {Sep 2024 -- Jul 2025}
+  {M.Eng., Aviation Engineering (English-taught program)}
+  {Moscow, Russia}
+
+\resumeentry
+  {Northwestern Polytechnical University --- School of Automation}
+  {Sep 2019 -- Jun 2023}
+  {B.Eng., Automation (Navigation, Guidance \& Control direction)}
+  {Xi'an, China}
+
+\ressection{\faBriefcase}{Work Experience (Internships)}
+
+\resumeentry
+  {Shanghai Civil Avionics System Co., Ltd. --- Integration \& Verification (I\&V) Engineer}
+  {Jul 2026 -- Present}
+  {Integration \& Verification Department}
+  {Shanghai, China}
+\begin{itemize}
+  \item Researching the \textbf{ARINC 615A} (TFTP-based data-loading protocol) / \textbf{ARINC 665} (LSAP software-packaging) stack for the DCAS display system as an \textbf{OHMS} member system; authored an internal training deck (615A session model, Wireshark-based ARINC 664/TFTP analysis) and defined a verification strategy favoring requirement-traceability review and Review Cases over exhaustive test-case coverage for this point-to-point interaction.
+  \item Supporting integration of a flight test article (``Red Label 3.0'') by executing test procedures and tracking problem reports (PRs) to closure; using an OHMS avionics simulator to validate IDU data-loading/fault-history-retrieval functions and deriving system-level test cases toward a reusable ARINC 615A/665 conformance-test capability.
+\end{itemize}
+
+\resumeentry
+  {AVIC Airborne Systems Co., Ltd. --- System Engineer}
+  {Jul 2025 -- Sep 2025}
+  {}
+  {}
+\begin{itemize}
+  \item Supported QA of onboard power-distribution-system documentation; conducted cross-review/consistency analysis across design docs, verification reports, and test cases for new projects.
+\end{itemize}
+
+\ressection{\faCode}{Project Experience}
+
+\resumeentry
+  {UAV Flight Management System --- Algorithm Portfolio (personal project, ongoing)}
+  {Jul 2026 -- Present}
+  {Simulation-driven state estimation, control \& fault-detection portfolio \textbar\ Python, C++17, MATLAB/Simulink}
+  {}
+\begin{itemize}
+  \item Designing and building, in phases, an open-source algorithm portfolio (EKF/UKF estimation, SO(3) geometric control, TCN fault detection) with a CI-tested architecture and requirements/FMEA-FTA baseline, following an ASPICE-style process; implementation ongoing.
+\end{itemize}
+
+\resumeentry
+  {Multi-Layer Satellite Constellation Beam \& Link Scheduling Optimization}
+  {Aug 2025 -- Dec 2025}
+  {Sponsored requirement, China Academy of Space Technology (CAST) \textbar\ MATLAB}
+  {}
+\begin{itemize}
+  \item Modeled satellite selection for a BeiDou-like constellation (24 MEO + 3 IGSO + 5 GEO) as a real-time, event-driven re-selection problem for navigation (4-satellite service, PDOP minimization) and telemetry (single-/dual-hop relay link, delay minimization); implemented a greedy MATLAB algorithm that holds the current assignment while feasible and re-searches all currently visible satellite combinations on failure, with a full LOS/elevation/beam-scan visibility engine and 3D simulation across 30+ heterogeneous users.
+\end{itemize}
+
+\resumeentry
+  {Graduate Thesis: VDMS based on MBSE/ARCADIA Methodology}
+  {Nov 2024 -- Mar 2026}
+  {SJTU School of Aeronautics and Astronautics \textbar\ SysML, Capella/ARCADIA}
+  {}
+\begin{itemize}
+  \item Built the complete Operational/System/Logical architecture (OA/SA/LA) of a Vehicle Data Management System (VDMS) in SysML using the \textbf{ARCADIA} methodology, driven by a 6-stage airworthiness data-lifecycle model addressing ICAO/CAAC data-governance requirements under an IMA architecture.
+  \item Decomposed requirements into \textbf{25 atomic functions} and \textbf{19 system-level data flows}; designed a 20-component logical architecture (Configuration Policy Manager, Storage Scheduling Gateway, Gateway Sync Service, Analysis Task Manager) with end-to-end data traceability and dynamic policy injection.
+\end{itemize}
+
+\resumeentry
+  {Re-entry Spacecraft Space-Segment Simulation \& Trajectory Optimization}
+  {Mar 2024 -- Aug 2025}
+  {Sponsored requirement, Shanghai Academy of Spaceflight Technology (SAST) \textbar\ MATLAB, FALCON}
+  {}
+\begin{itemize}
+  \item Simulated the space-segment flight dynamics of a re-entry spacecraft from a specified initial orbit to the atmospheric entry interface, and formulated/solved the descent trajectory as a constrained optimal-control problem in MATLAB using \textbf{FALCON}, a sequential convex optimization (SCP)-based trajectory-optimization tool.
+\end{itemize}
+
+\ressection{\faWrench}{Technical Skills}
+
+\skillline{Programming}{Python, C++}
+\skillline{Model-Based Dev.}{MATLAB/Simulink, SysML, ARCADIA/Capella, Innoslate}
+\skillline{Automotive / Systems}{Reliability Workbench (RWB, FMEA/FMECA/FTA), DOORS}
+\skillline{Other Tools}{PyTorch, Office, \LaTeX}
+
+\ressection{\faAward}{Certificates \& Languages}
+
+\begin{itemize}
+  \item English: CET-6; IELTS exam scheduled for Aug 5, 2026 (current mock score $\approx$ 7.0). Russian: basic conversational (from the MAI exchange program).
+\end{itemize}
+
+\end{document}
