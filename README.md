@@ -1,20 +1,20 @@
 # My Individual Resume Template (LaTeX)
 
 A one-page resume template (English + Chinese) with a colored header banner,
-icon + horizontal-rule section headings, and arrow-style bullets — styled
-after the SJTU "蓝色梦想" (Blue Dream) look popularized by
-[JunzheShen/SJTU-Resume-Template-in-Typst](https://github.com/JunzheShen/SJTU-Resume-Template-in-Typst),
-rebuilt from scratch in LaTeX.
+icon + horizontal-rule section headings, and arrow-style bullets, written
+from scratch in LaTeX.
 
-This repo is populated with a real, working example (my own resume, targeting
+This repo is populated with a real, finished example (my own resume, targeting
 a systems/function-development engineering role) so you can see exactly how
-the template renders — just replace the content with your own.
+the template renders — just replace the content with your own. Compiled PDF
+output is included (`resume-en.pdf`, `resume-zh.pdf`) so you can preview the
+result without building it yourself.
 
 ## Files
 
 - `resume.cls` — shared style class (colors, header, section, entry, bullet macros)
-- `resume-en.tex` — English resume (example content)
-- `resume-zh.tex` — Chinese resume (example content, requires XeLaTeX + `ctex`/Fandol fonts)
+- `resume-en.tex` / `resume-en.pdf` — English resume (example content) and its compiled output
+- `resume-zh.tex` / `resume-zh.pdf` — Chinese resume (example content, requires XeLaTeX + `ctex`/Fandol fonts) and its compiled output
 - `build.ps1` — compiles both to PDF (PowerShell)
 
 ## Build
