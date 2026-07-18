@@ -1,7 +1,6 @@
 % resume.cls
-% Custom one-page resume class, styled after the SJTU "Blue Dream" Typst
-% template (colored header banner, icon + rule section headings, arrow
-% bullets) that this project was originally scaffolded from.
+% Custom one-page resume class: colored header banner, icon + rule section
+% headings, arrow bullets.
 %
 % Usage:
 %   \documentclass{resume}            % English content -> compile with pdflatex or xelatex
