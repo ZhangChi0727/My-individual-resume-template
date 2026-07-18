@@ -1,0 +1,117 @@
+% resume-zh.tex — 中文简历，系统与功能开发工程师，采埃孚（济南）
+% 编译方式（必须使用 xelatex）：  xelatex resume-zh.tex
+\documentclass[zh]{resume}
+
+\begin{document}
+
+\resumeheader
+  {张驰 \textbar\ Chi Zhang}
+  {系统与功能开发工程师 候选人}
+  {%
+    \contactitem{\faPhone}{180-4527-9927}%
+    \contactsep
+    \contactitem{\faEnvelope}{Chizhang0727@gmail.com}%
+    \contactsep
+    \contactitem{\faMapMarker}{中国 上海}%
+    \contactsep
+    \contactitem{\faGithub}{\resumelink{https://github.com/ZhangChi0727}{github.com/ZhangChi0727}}%
+  }
+
+\ressection{\faGraduationCap}{教育背景}
+
+\resumeentry
+  {上海交通大学 --- 航空航天学院}
+  {2023.09 -- 2026.03}
+  {工学硕士，航空宇航系统工程（飞行器系统设计方向）}
+  {}
+\begin{itemize}
+  \item 学位论文：《基于模型化系统工程ARCADIA方法的飞行器数据管理系统研究》—— 详见项目经历。
+\end{itemize}
+
+\resumeentry
+  {莫斯科航空学院（Moscow Aviation Institute, MAI）}
+  {2024.09 -- 2025.07}
+  {工学硕士，航空工程（全英文授课项目）}
+  {}
+
+\resumeentry
+  {西北工业大学 --- 自动化学院}
+  {2019.09 -- 2023.06}
+  {工学学士，自动化（导航、制导与控制方向）}
+  {}
+
+\ressection{\faBriefcase}{工作经历（实习）}
+
+\resumeentry
+  {上海民用航空电子系统有限公司 --- 集成验证（I\&V）工程师}
+  {2026.07 -- 至今}
+  {集成验证部}
+  {中国 上海}
+\begin{itemize}
+  \item 研究面向 DCAS 显控系统（作为 OHMS 成员系统）的 \textbf{ARINC 615A}（基于 TFTP 的数据加载协议）与 \textbf{ARINC 665}（LSAP 可加载软件封装标准）协议栈；编制内部培训材料（615A 会话模型、基于 Wireshark 的 A664/TFTP 协议分析），并针对该点对点交互制定验证策略——相比穷举系统级测试用例，优先开展下层级需求追溯审查与 Review Case 设计。
+  \item 支持“红标3.0”试验件集成工作：执行测试程序（TP），跟踪问题报告（PR）直至闭环；使用 OHMS 航电仿真器验证 IDU 数据加载/故障历史获取功能，制定系统级测试用例，推动可复用的 ARINC 615A/665 协议符合性测试能力建设。
+\end{itemize}
+
+\resumeentry
+  {中航机载系统有限公司 --- 系统工程师}
+  {2025.07 -- 2025.09}
+  {}
+  {}
+\begin{itemize}
+  \item 支持机载配电系统技术文档质量保证工作，对设计文档、验证报告与测试用例进行交叉审查与一致性分析。
+\end{itemize}
+
+\ressection{\faCode}{项目经历}
+
+\resumeentry
+  {无人机飞行管理系统算法作品集（个人项目，进行中）}
+  {2026.07 -- 至今}
+  {仿真驱动的状态估计、控制与故障检测算法作品集 \textbar\ Python、C++17、MATLAB/Simulink}
+  {}
+\begin{itemize}
+  \item 分阶段设计并搭建覆盖 EKF/UKF 状态估计、SO(3) 几何姿态控制与基于 TCN 的故障检测的开源算法作品集，已完成 CI 流水线与需求/FMEA-FTA 安全文档基线搭建，遵循 ASPICE 风格流程；算法实现正在推进中。
+\end{itemize}
+
+\resumeentry
+  {多层卫星星座波束与链路调度优化}
+  {2025.08 -- 2025.12}
+  {委托课题，中国空间技术研究院（航天五院） \textbar\ MATLAB}
+  {}
+\begin{itemize}
+  \item 将类北斗多层星座（24 MEO + 3 IGSO + 5 GEO）的卫星选择问题建模为实时、事件驱动的服务/链路重选问题，分别用于导航（4星服务组合，PDOP 最小化）与遥测（单跳/双跳中继链路，时延最小化）两类服务。
+  \item 在 MATLAB 中实现贪心算法：当前分配在满足可见性/质量门限期间保持不变，一旦失效则对当前可见卫星的全部组合重新搜索以选取局部最优配置；并搭建了完整的视距/仰角/波束扫描角可见性引擎与逐秒仿真及三维链路可视化流程，在30余种异构用户（航天器/机载/舰载/车载/地面站）场景下完成验证。
+\end{itemize}
+
+\resumeentry
+  {学位论文：基于模型化系统工程ARCADIA方法的飞行器数据管理系统研究}
+  {2024.11 -- 2026.03}
+  {上海交通大学航空航天学院 \textbar\ SysML, Capella/ARCADIA}
+  {}
+\begin{itemize}
+  \item 采用 \textbf{ARCADIA} 方法论，以适航标准驱动的六阶段航空数据生命周期模型为基石，通过 SysML 构建飞行器数据管理系统（VDMS）的完整运行、系统与逻辑架构（OA/SA/LA），对应 ICAO/CAAC 在 IMA 架构下的数据治理要求。
+  \item 在系统分析阶段将需求分解为 \textbf{25 项原子功能}与 \textbf{19 条系统级数据流}；在逻辑架构阶段设计由 20 个逻辑组件构成的架构，以配置策略管理器、存储调度网关、网关同步服务与分析任务管理器为核心，实现端到端数据可追溯性与治理策略动态注入。
+\end{itemize}
+
+\resumeentry
+  {再入航天器空间段飞行仿真与轨迹优化}
+  {2024.03 -- 2025.08}
+  {委托课题，上海航天技术研究院（航天八院） \textbar\ MATLAB, FALCON}
+  {}
+\begin{itemize}
+  \item 针对再入航天器，仿真其从指定初始轨道至再入点的空间段飞行动力学过程，并将下降轨迹建模为带约束的最优控制问题，使用 MATLAB 中的 \textbf{FALCON}（基于序列凸优化 SCP 的轨迹优化工具）求解。
+\end{itemize}
+
+\ressection{\faWrench}{专业技能}
+
+\skillline{编程语言}{Python、C++}
+\skillline{模型化开发}{MATLAB/Simulink、SysML、ARCADIA/Capella、Innoslate}
+\skillline{汽车 / 系统工程}{Reliability Workbench (RWB, FMEA/FMECA/FTA)、DOORS}
+\skillline{其他工具}{PyTorch、Office、\LaTeX}
+
+\ressection{\faAward}{证书与语言}
+
+\begin{itemize}
+  \item 英语：CET-6；雅思 2026.8.5 考试（模考约 7.0 分）；俄语：基础日常交流（MAI 交流期间习得）
+\end{itemize}
+
+\end{document}
